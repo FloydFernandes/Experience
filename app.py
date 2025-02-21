@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-import json
-
+import os
 
 # Google Sheets Setup
 
@@ -77,9 +76,10 @@ st.markdown(
 )
 
 # Load Logo and Title
+logo_path = os.path.join(os.path.dirname(__file__), "Plannabe Logo.png")
 col1, col2 = st.columns([1, 4])
 with col1:
-    st.image("https://drive.google.com/file/d/1C9wSqMF1C8w-mYWMBOzKgdVGMctGo7Xa/view?usp=share_link", width=100)  # Ensure "logo.png" is in the same folder
+    st.image(logo_path, width=100)  # Ensure "logo.png" is in the same folder
 with col2:
     st.markdown("<div class='logo-text'>Welcome to Plannabe!<br></div><div class='header-text'>Plan your beer hopping experience with us 🍻</div>", unsafe_allow_html=True)
 
