@@ -79,7 +79,7 @@ st.markdown(
 # Load Logo and Title
 col1, col2 = st.columns([1, 4])
 with col1:
-    st.image(r"https://github.com/FloydFernandes/Experience/blob/9aec1a84cfb9f536a4a9195a7c5a41a6e422cb63/Plannabe%20Logo.png", width=100)  # Ensure "logo.png" is in the same folder
+    st.image("https://drive.google.com/file/d/1C9wSqMF1C8w-mYWMBOzKgdVGMctGo7Xa/view?usp=share_link", width=100)  # Ensure "logo.png" is in the same folder
 with col2:
     st.markdown("<div class='logo-text'>Welcome to Plannabe!<br></div><div class='header-text'>Plan your beer hopping experience with us 🍻</div>", unsafe_allow_html=True)
 
