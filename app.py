@@ -7,10 +7,10 @@ import json
 
 # Google Sheets Setup
 
-credentials_dict = st.secrets["gcp_service_account"]
-creds_json = json.dumps(credentials_dict)
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_dict(st.secrets["gcp_service_account"], [
+    "https://spreadsheets.google.com/feeds", 
+    "https://www.googleapis.com/auth/drive"
+])
 client = gspread.authorize(creds)
 
 # Load Pubs and Travel Data
