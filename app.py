@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import gspread
-import pip
-pip.main(["install", "oauth2client"])
 from oauth2client.service_account import ServiceAccountCredentials
 import json
 
